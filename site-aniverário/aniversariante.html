@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniversariante</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #confetti-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #e91e63;
+            border-radius: 50%;
+            animation: confetti-fall 2s infinite;
+        }
+        @keyframes confetti-fall {
+            0% { transform: translateY(-100vh) rotate(0deg); }
+            100% { transform: translateY(100vh) rotate(360deg); }
+        }
+        /* Estilo para o slide */
+        #slide-container {
+            overflow: hidden;
+            width: 80%;
+            margin: 0 auto;
+            position: relative;
+            height: 300px; /* Ajuste conforme necessário */
+        }
+        .slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎉 Feliz Aniversário 🎉</h1>
+    <h2 id="nome"></h2>
+    <h3 id="idade"></h3>
+    <p id="mensagem"></p>
+
+    <!-- Container do slide -->
+    <div id="slide-container">
+        <!-- Imagens de exemplo -->
+        <div class="slide active">
+            <img src="download.jpeg" alt="Parabéns">
+        </div>
+        <div class="slide">
+            <img src="images (2).jpeg" alt="Parabéns">
+        </div>
+        <div class="slide">
+            <img src="pantera.jpeg" alt="Parabéns">
+        </div>
+        <div class="slide">
+            <img src="download (4).jpeg" alt="Parabéns">
+        </div>
+        <div class="slide">
+            <img src="images (1).jpeg" alt="Parabéns">
+        </div>
+    </div>
+
+    <div id="confetti-container"></div>
+
+    <script>
+        // Recuperando dados do localStorage
+        const jsonData = localStorage.getItem('dadosCadastro');
+        const data = JSON.parse(jsonData);
+
+        // Exibindo os dados na página
+        if (data) {
+            document.getElementById('nome').textContent = `Nome: ${data.nome}`;
+            document.getElementById('idade').textContent = `Idade: ${data.idade} anos`;
+            document.getElementById('mensagem').textContent = `Mensagem: ${data.mensagem}`;
+
+            // Função para adicionar confetes
+            function addConfetti() {
+                const confettiContainer = document.getElementById('confetti-container');
+                for (let i = 0; i < 50; i++) {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.left = `${Math.random() * 100}%`;
+                    confetti.style.animationDelay = `${Math.random()}s`;
+                    confettiContainer.appendChild(confetti);
+                }
+            }
+
+            addConfetti(); // Adiciona confetes ao carregar a página
+        }
+
+        // Script para controlar o slide
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % totalSlides;
+            slides[currentSlide].classList.add('active');
+        }
+
+        setInterval(nextSlide, 3000); // Alterna os slides a cada 3 segundos
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniversariante</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #confetti-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #e91e63;
+            border-radius: 50%;
+            animation: confetti-fall 2s infinite;
+        }
+        @keyframes confetti-fall {
+            0% { transform: translateY(-100vh) rotate(0deg); }
+            100% { transform: translateY(100vh) rotate(360deg); }
+        }
+        /* Estilo para o slide */
+        #slide-container {
+            overflow: hidden;
+            width: 80%;
+            margin: 0 auto;
+            position: relative;
+            height: 300px; /* Ajuste conforme necessário */
+        }
+        .slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    

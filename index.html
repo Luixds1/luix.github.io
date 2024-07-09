@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Nome - Portfólio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Seu Nome</h1>
+            <p>Luiz-rd</p>
+        </div>
+    </header>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Meus Projetos</h2>
+            <div class="project">
+                <h3><a href="Jogo da velha/index.html" onclick="openProject('projeto1')">Jogo da velha</a></h3>
+                <p></p>
+            </div>
+            <div class="project">
+                <h3><a href="site-aniverário/index.html" onclick="openProject('projeto2')">site-aniverário</a></h3>
+                <p>Descrição do projeto 2...</p>
+            </div>
+            <!-- Adicione mais projetos conforme necessário -->
+        </div>
+    </section>
+
+    <section id="projectDetails" class="hidden">
+        <div class="container">
+            <h2 id="projectTitle">Site aniversário</h2>
+            <p id="projectDescription">Descrição detalhada do projeto 1...</p>
+            <a href="site-aniverário/index.html" onclick="closeProject()">Fechar</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Luixx_rdx. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

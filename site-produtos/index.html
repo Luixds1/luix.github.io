@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Produtos Neutro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4f395c;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            width: 200px;
+            background-color: #d796f5;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }SS
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            padding: 10px;
+            text-align: center;
+        }
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+        .product {
+            display: flex;
+            margin-bottom: 30px;
+        }
+        .product-image {
+            flex: 1;
+            margin-right: 20px;
+        }
+        .product-info {
+            flex: 2;
+        }
+        .product-info h3 {
+            margin-top: 0;
+        }
+        .product-info p {
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #4f3558;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        img {
+            width: 70%;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Luix zooomm</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <section id="inicio">
+            <h2>Início</h2>
+            <p>Bem-vindo ao nosso site de produtos!</p>
+        </section>
+        <section id="produtos">
+            <h2>Produtos</h2>
+            <div class="product">
+                <div class="product-image">
+                    <img src="quadro flor.jpg" alt="Produto 1">
+                </div>
+                <div class="product-info">
+                    <h3>quadro de flores azuis e brancas.</h3>
+                    <p>Descrição curta do produto.</p>
+                    <p>Preço: R$ 99,00</p>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-image">
+                    <img src="images.jpeg" alt="">
+                </div>
+                <div class="product-info">
+                    <h3>quadro de flores em aquarela.</h3>
+                    <p>Descrição curta do produto.</p>
+                    <p>Preço: R$ 129,00</p>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product-image">
+                    <img src="360_F_691938377_4Ef8yFN6qe5utahlY934XfXwvEW5rpez.jpg" alt="Produto 3">
+                </div>
+                <div class="product-info">
+                    <h3>Flores em aquarela.</h3>
+                    <p>Descrição curta do produto.</p>
+                    <p>Preço: R$ 79,00</p>
+                </div>
+            </div>
+        </section>
+        <section id="sobre">
+            <h2>Sobre</h2>
+            <p>Saiba mais sobre nossa empresa e nossa missão.</p>
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Entre em contato conosco para mais informações.</p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Luix zooomm. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
